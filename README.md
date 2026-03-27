@@ -1,4 +1,5 @@
-Kitesurf School Analytics
+## Kitesurf School Analytics
+![Dashboard](assets/dashboard.png)
 
 An end-to-end data project — from raw operational data to interactive business dashboard.
 
@@ -11,39 +12,73 @@ An end-to-end data project — from raw operational data to interactive business
 ### Overview
 This project simulates and analyzes the operations of a kitesurf school through a complete data pipeline — from synthetic data generation to an interactive Streamlit dashboard. The goal is to demonstrate how data systems and analytics can drive better decisions around pricing, instructor allocation, and seasonal strategy in a real-world business context.
 
+### Project Architecture
+
+```text
 seed.py → bookings.csv → watersports.db (SQLite)
-                       → analysis.ipynb (pandas)
-                       → app.py (Streamlit dashboard)
+                         → analysis.ipynb (pandas)
+                         → app.py (Streamlit dashboard)
 
 ### Features
-Data Engineering — Synthetic dataset of 300 bookings with seasonal pricing logic and SQLite storage.
-Exploratory Analysis — Revenue, profit, and seasonality breakdowns; instructor performance; equipment utilization rates.
-Interactive Dashboard — Filterable KPIs, trend charts, profit analysis, and a live SQL Explorer — all in Streamlit.
+
+- **Data Engineering**
+  - Synthetic dataset (300 bookings)
+  - Seasonal pricing logic
+  - SQLite database
+
+- **Exploratory Analysis**
+  - Revenue & profit analysis
+  - Seasonality trends
+  - Instructor performance
+  - Equipment utilization
+
+- **Interactive Dashboard**
+  - KPI metrics (revenue, profit, bookings)
+  - Filters (sport, instructor, status)
+  - Trend visualizations
+  - Built-in SQL Explorer
 
 ### Key Insights
-AreaFindingProfitabilityAvg. profit ≈ R$273/session; longer sessions yield lower marginsSeasonalityPeak demand in Jan, Jul & Aug; low season in Apr–MayInstructorsPedro leads in both volume and efficiency; Marcos underperformsEquipmentFoil board & windsurf drive most revenue; kitesurf gear underutilized
 
-### Getting Started
+| Area         | Finding |
+|--------------|--------|
+| Profitability | Avg. profit ≈ R$273/session; longer sessions yield lower margins |
+| Seasonality   | Peak demand in Jan, Jul & Aug; low season in Apr–May |
+| Instructors   | Pedro leads in both volume and efficiency; Marcos underperforms |
+| Equipment     | Foil board & windsurf drive most revenue; kitesurf gear underutilized |
+
+### Business Recommendations
+
+- Adjust pricing for longer sessions to improve margins  
+- Increase marketing during low season (Apr–May)  
+- Allocate top instructors to high-value sessions  
+- Invest more in high-demand equipment (foil, windsurf)  
+
+### Quick Start
 Prerequisites: Python 3.10+
-bash# 1. Clone the repo
+
+```bash
+# 1. Clone the repo
 git clone https://github.com/emilly-kelda/kitesurf-school-analytics.git
 cd kitesurf-school-analytics
 
-### 2. Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 
-### 3. Generate the database
+# 3. Generate the database
 python seed.py
 
-### 4. Launch the dashboard
+# 4. Launch the dashboard
 streamlit run app.py
-Open http://localhost:8501 in your browser. Use the sidebar filters to explore sports, instructors, and booking statuses.
-
+``` 
 Optional: Open analysis.ipynb in Jupyter, VS Code, or Google Colab to explore the full analysis.
-
 
 ### Tech Stack
 Python · pandas · SQLite · Streamlit · Plotly · Matplotlib
 
 ### Skills Demonstrated
 Data engineering · Feature engineering · SQL design · Exploratory data analysis · Business storytelling · Dashboard development
+
+### Conclusion
+
+This project demonstrates how raw operational data can be transformed into actionable insights and interactive tools to support real business decisions.
