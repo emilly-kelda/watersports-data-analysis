@@ -80,3 +80,7 @@ Data engineering · Feature engineering · SQL design · Exploratory data analys
 ### Conclusion
 
 This project demonstrates how raw operational data can be transformed into actionable insights and interactive tools to support real business decisions.
+
+## License
+
+This project is licensed under the MIT License.
