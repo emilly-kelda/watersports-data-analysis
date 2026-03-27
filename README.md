@@ -1,5 +1,4 @@
 ## Kitesurf School Analytics
-![Dashboard](assets/dashboard.png)
 
 An end-to-end data project — from raw operational data to interactive business dashboard.
 
